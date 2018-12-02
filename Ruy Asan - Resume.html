@@ -28,7 +28,7 @@
     font-family: Consolas, Monaco;
     font-style: normal;
     font-weight: bold;
-    background:#eee;
+    background: #eee;
     padding: 0 2px;
   }
   em.title {
@@ -50,10 +50,10 @@
   section > h2 {
     float: left;
     line-height: 1.5em;
-    width:auto;
+    width: auto;
     margin: 0;
     font-size: 130%;
-    margin-top:0.5em;
+    margin-top: 0.5em;
   }
   section > h1 {
     margin: 0;
@@ -73,11 +73,18 @@
   section .highlights {
     padding-top: 0.5em;
     clear: both;
-    line-height: 1.35;
+    line-height: 1.2;
   }
+  
   .highlights.overview {
     margin:0;
     padding-top: 0.5em;
+  }
+  .printonly {
+    display: none;
+  }
+  br {
+    display: none;
   }
   </style>
   <style type="text/css" media="print">
@@ -85,6 +92,9 @@
     margin:0 !important;
     padding:0 !important;
     width:auto;
+  }
+  br {
+    display: initial;
   }
   body {
     font-size:12pt;
@@ -96,9 +106,21 @@
   section {
     page-break-inside: avoid;
   }
+  section.cover {
+    margin-top: 2em;
+  }
+  section.cover .highlights {
+    line-height: 1.4;
+  }
   .vcard .contact{
     top: 0;
     right: 0;
+  }
+  .printonly {
+    display: block;
+    margin-top: 5em;
+    text-align: center;
+    width: 100%;
   }
   </style>
 </head>
@@ -111,7 +133,7 @@
               <li class="tel">+1 (604) 220-3902</li>
       </ul>
       </header>
-      <section>
+      <section class="cover">
         <h1>Overview</h1>
         <ul class="highlights overview">
           <li>Experienced team and technical lead with a proven track record.</li>
@@ -121,7 +143,7 @@
           <li>Passionate about technology and meaningful team building.</li>
         </ul>
       </section>
-      <section>
+      <section class="cover">
         <h2>Bench Accounting</h2>
         <div class="employment duration">
           <time datetime="2017-09">Sep 2017</time>
@@ -130,13 +152,16 @@
         </div>
         <ul class="highlights">
           <li>Engineering manager for client web app development team (4-8 engineers, as well as a product manager, and a UI designer), responsible for all client-facing services (including our mobile app), and their supporting infrastructure.</li>
-          <li>Guided team through transitioning to <strong>Agile</strong>. Achieved consistent delivery estimates accurate to within 15%.</li>
-          <li>Led integration test improvement effort, improving test reliability (rate of false failures) by a factor of 10, and cutting test execution time down to one half. This, in turn, enabled our (approximately) 20-person engineering department to consistently deploy an impressive 600 live releases per quarter.</li>
-          <li>Reduced average sprint effort spent on fixing faults in the live system, from 25% down to less than 5% (often 0).</li>
+          <li>Guided team through transitioning to <strong>Agile</strong>. Achieved consistent delivery estimates accurate to<br /> within 15%.</li>
+          <li>Led integration test improvement effort, improving test reliability (rate of false failures) by a factor of 10, and cutting test execution time down to one half. This, in turn, enabled our (approximately)<br /> 20-person engineering department to consistently deploy an impressive 600 live releases per quarter.</li>
+          <li>Reduced average sprint effort spent on fixing faults in the live system, from 25% down to less<br /> than 5% (often 0).</li>
           <li>Oversaw delivery of two major feature additions: Direct transaction integration for clients using the Square payment service, and a new transaction tagging system. The latter enabled Bench to service businesses that require financial statements to be broken down by location, business unit, client or other such dimensions - a major new source of revenue.</li>
           <li>Led several company-wide efforts to clean up our front-end code-base, which included: a gradual transition to <em class="technical">React</em> from <em class="technical">AngularJS</em>, a major re-organization of our code structure, and the introduction of <em class="technical">Flow</em>, <em class="technical">eslint</em>, <em class="technical">Yarn</em>, <em class="technical">styled-components</em>, the <em class="technical">Apollo GraphQL</em> client, and <em class="technical">React-Router</em>.
           <li>Architected a set of core component libraries, which simplified form management, theming, and layout across teams.</li>
         </ul>
+        <p class="printonly">
+          (Continued &hellip;)
+        </p>
       </section>
       <section>
         <h2>Relic Entertainment</h2>
